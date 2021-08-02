@@ -1,14 +1,14 @@
 package com.calltouch.pattern.creational.baeldung;
 
-public class Duck implements Animal {
+public class Dog implements com.calltouch.pattern.creational.baeldung.Animal {
 
     @Override
     public String getAnimal() {
-        return "Duck";
+        return "Dog";
     }
 
     @Override
     public String makeSound() {
-        return "Squeks";
+        return "Wooof";
     }
 }

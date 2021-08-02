@@ -8,19 +8,19 @@ class FactoryProviderTest {
 
     @Test
     public void factoryTest() {
-        AbstractFactory<?> abstractFactory = FactoryProvider.getFactory("Animal");
+        com.calltouch.pattern.creational.baeldung.AbstractFactory<?> abstractFactory = com.calltouch.pattern.creational.baeldung.FactoryProvider.getFactory("Animal");
         if(abstractFactory != null) {
-            Animal animal = (Animal) abstractFactory.create("Dog");
+            com.calltouch.pattern.creational.baeldung.Animal animal = (com.calltouch.pattern.creational.baeldung.Animal) abstractFactory.create("Dog");
             assertEquals("Dog", animal.getAnimal());
             assertEquals("Wooof", animal.makeSound());
-            animal = (Animal) abstractFactory.create("Duck");
+            animal = (com.calltouch.pattern.creational.baeldung.Animal) abstractFactory.create("Duck");
             assertEquals("Duck", animal.getAnimal());
             assertEquals("Squeks", animal.makeSound());
         }
 
-        abstractFactory = FactoryProvider.getFactory("Color");
+        abstractFactory = com.calltouch.pattern.creational.baeldung.FactoryProvider.getFactory("Color");
         if(abstractFactory != null) {
-            Color color = (Color) abstractFactory.create("White");
+            com.calltouch.pattern.creational.baeldung.Color color = (com.calltouch.pattern.creational.baeldung.Color) abstractFactory.create("White");
             assertEquals("White", color.getColor());
         }
     }

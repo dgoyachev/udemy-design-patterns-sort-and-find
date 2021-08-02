@@ -2,14 +2,12 @@ package com.calltouch.pattern.creational.udemy;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class AbstractSamsungFactoryTest {
 
     @Test
     public void factoryTest() {
-        IMobile samsungMobilePhone = new Samsung();
-        MobileClient samsungClient = new MobileClient(samsungMobilePhone);
+        com.calltouch.pattern.creational.udemy.IMobile samsungMobilePhone = new com.calltouch.pattern.creational.udemy.Samsung();
+        com.calltouch.pattern.creational.udemy.MobileClient samsungClient = new com.calltouch.pattern.creational.udemy.MobileClient(samsungMobilePhone);
         System.out.println(samsungClient.getAndroidPhoneDetails());
         System.out.println(samsungClient.getIOSPhoneDetails());
     }
